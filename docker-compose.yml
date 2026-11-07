@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  retention-pipeline:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: customer-retention-pipeline:latest
+    container_name: retention_pipeline
+    volumes:
+      - ./data:/app/data
+    restart: "no"
+
